@@ -157,9 +157,10 @@ main {
   align-items: baseline;
   gap: 0.6rem;
   padding: 0.3rem 0;
-  font-family: var(--font-body);
+  font-family: var(--font-ui);
   font-size: 0.95rem;
   font-weight: 400;
+  line-height: 1.2;
   color: var(--text);
   transition: color 0.15s;
 }
@@ -168,13 +169,10 @@ main {
 
 .view-a .item-main,
 .view-p .item-main {
-  font-family: var(--font-ui);
   font-size: 0.88rem;
-  line-height: 1.2;
 }
 .view-a .item-meta,
 .view-p .item-meta {
-  font-family: var(--font-ui);
   font-size: 0.78rem;
   color: var(--muted);
 }
@@ -185,16 +183,18 @@ main {
 /* ── Author page poem list ── */
 .author-poems .poem-item {
   display: block;
-  font-family: var(--font-body);
+  padding: 0.3rem 0;
+  font-family: var(--font-ui);
   font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.2;
   color: var(--text);
-  padding: 0.15rem 0;
-  transition: color 0.15s;
+  transition: color 0.15s; 
 }
 .author-poems .poem-item:hover { color: var(--hover); }
 
 /* ── Poem page ── */
-.poem-page { }
+/* .poem-page { } */
 
 /* Verso: container wraps to content, centered */
 .poem-page.is-verso {
