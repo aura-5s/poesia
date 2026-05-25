@@ -1,0 +1,84 @@
+{{ define "main" }}
+{{/*
+  Homepage — three views:
+    A/P : author groups → poems  (default)
+    A   : all authors alphabetically
+    P   : all poems alphabetically
+
+  We use the author taxonomy term pages so we get .Title with original casing.
+*/}}
+
+{{ $allPoems := where site.RegularPages "Section" "poemas" }}
+{{ $poemsSorted := sort $allPoems "Title" }}
+
+{{/* Get author term pages sorted by title */}}
+{{ $authorTermPages := slice }}
+{{ with site.GetPage "/author" }}
+  {{ $authorTermPages = sort .Pages "Title" }}
+{{ end }}
+
+<div class="view-switcher">
+  <button class="view-btn active" data-view="ap">A/P</button>
+  <button class="view-btn" data-view="a">A</button>
+  <button class="view-btn" data-view="p">P</button>
+</div>
+
+{{/* ── VIEW A/P ── */}}
+<div id="view-ap" class="poem-list view-ap">
+  {{ range $authorTermPages }}
+    {{ $termPage := . }}
+    {{ $poems := sort .Pages "Title" }}
+    <div class="author-group">
+      <a class="author-row" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ range $poems }}
+        <a class="poem-row" href="{{ .RelPermalink }}">{{ .Title }}</a>
+      {{ end }}
+    </div>
+  {{ end }}
+</div>
+
+{{/* ── VIEW A ── */}}
+<div id="view-a" class="poem-list view-a" style="display:none">
+  {{ range $authorTermPages }}
+    {{ $count := len .Pages }}
+    <a class="list-item" href="{{ .RelPermalink }}">
+      <span class="item-main">{{ .Title }}</span>
+      <span class="item-meta">{{ $count }} {{ if eq $count 1 }}poema{{ else }}poemas{{ end }}</span>
+    </a>
+  {{ end }}
+</div>
+
+{{/* ── VIEW P ── */}}
+<div id="view-p" class="poem-list view-p" style="display:none">
+  {{ range $poemsSorted }}
+    {{ $a := .Params.author | default "Anónimo" }}
+    <a class="list-item" href="{{ .RelPermalink }}">
+      <span class="item-main">{{ .Title }}</span>
+      <span class="item-meta">{{ $a }}</span>
+    </a>
+  {{ end }}
+</div>
+
+<script>
+(function () {
+  const btns = document.querySelectorAll('.view-btn');
+  const views = { ap: 'view-ap', a: 'view-a', p: 'view-p' };
+
+  const saved = localStorage.getItem('poemasView') || 'ap';
+  switchView(saved);
+
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => switchView(btn.dataset.view));
+  });
+
+  function switchView(v) {
+    btns.forEach(b => b.classList.toggle('active', b.dataset.view === v));
+    Object.entries(views).forEach(([key, id]) => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = key === v ? '' : 'none';
+    });
+    localStorage.setItem('poemasView', v);
+  }
+})();
+</script>
+{{ end }}

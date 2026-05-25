@@ -1,0 +1,15 @@
+{{ define "main" }}
+{{ $author := .Title }}
+{{ $poems := sort .Pages "Title" }}
+
+<div class="page-header">
+  <h1>{{ $author }}</h1>
+  <p class="meta">{{ len $poems }} {{ if eq (len $poems) 1 }}poema{{ else }}poemas{{ end }}</p>
+</div>
+
+<div class="author-poems">
+  {{ range $poems }}
+    <a class="poem-item" href="{{ .RelPermalink }}">{{ .Title }}</a>
+  {{ end }}
+</div>
+{{ end }}

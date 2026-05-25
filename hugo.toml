@@ -1,0 +1,22 @@
+# ── Actualiza baseURL con tu usuario y nombre de repo ──────────────────────
+# Ejemplo para repo "poemas": baseURL = "https://tu-usuario.github.io/poemas/"
+# Ejemplo para repo raíz: baseURL = "https://tu-usuario.github.io/"
+baseURL = "https://aura-5s.github.io/poesia/"
+languageCode = "es"
+title = "poesia"
+
+[taxonomies]
+  author = "author"
+
+# Los poemas se publican en /:slug/ directamente (sin subfolder de sección)
+[permalinks]
+  [permalinks.page]
+    poemas = "/:slug/"
+
+[params]
+  accentColor = "rgb(180, 100, 120)"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

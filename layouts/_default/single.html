@@ -1,0 +1,20 @@
+{{ define "main" }}
+{{ $isVerso := eq (.Params.type | lower) "verso" }}
+{{ $typeClass := cond $isVerso "is-verso" "is-prosa" }}
+
+<article class="poem-page {{ $typeClass }}">
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.author }}
+      {{ $authorURL := printf "/author/%s/" (. | urlize) | relURL }}
+      <p class="meta"><a href="{{ $authorURL }}">{{ . }}</a></p>
+    {{ end }}
+  </header>
+
+  {{ if $isVerso }}
+    <div class="poem-body verse-text">{{ .Content }}</div>
+  {{ else }}
+    <div class="poem-body prose-text">{{ .Content }}</div>
+  {{ end }}
+</article>
+{{ end }}
