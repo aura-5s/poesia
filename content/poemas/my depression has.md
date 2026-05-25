@@ -6,10 +6,10 @@ type: verso
 
 and if he loves you, what is next?
 will you warn him about all your crying?
-&emsp;it happens too often to ignore
-&emsp;he will be telling you something
-&emsp;about a coworker and suddenly
-&emsp;there it is
+<span style="display:inline-block; width:2.5em;"></span>it happens too often to ignore
+<span style="display:inline-block; width:2.5em;"></span>he will be telling you something
+<span style="display:inline-block; width:2.5em;"></span>about a coworker and suddenly
+<span style="display:inline-block; width:2.5em;"></span>there it is
 
 the river behind your grandmother’s house
 winding down your face, your throat, your lap

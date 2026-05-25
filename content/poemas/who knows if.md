@@ -20,6 +20,6 @@ away and away sailing into a keen
 city which nobody's ever visited,where
 
 always
-&emsp;it's
-&emsp;&emsp;Spring)and everyone's
+<span style="display:inline-block; width:3em;"></span>it's
+<span style="display:inline-block; width:4.5em;"></span>Spring)and everyone's
 in love and flowers pick themselves

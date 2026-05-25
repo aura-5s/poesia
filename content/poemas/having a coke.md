@@ -17,7 +17,7 @@ between each other like a tree breathing through its spectacles
 
 and the portrait show seems to have no faces in it at all, just paint
 you suddenly wonder why in the world anyone ever did them
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;I look
+<span style="display:inline-block; width:23em;"></span>I look
 at you and I would rather look at you than all the portraits in the world
 except possibly for the Polish Rider occasionally and anyway it’s in the Frick
 which thank heavens you haven’t gone to yet so we can go together for the first time
@@ -26,7 +26,8 @@ just as at home I never think of the Nude Descending a Staircase or
 at a rehearsal a single drawing of Leonardo or Michelangelo that used to wow me
 and what good does all the research of the Impressionists do them
 when they never got the right person to stand near the tree when the sun sank
-or for that matter Marino Marini when he didn’t pick the rider as carefully as the horse
-&emsp;&emsp;&emsp;it seems they were all cheated of some marvelous
-&emsp;experience
+or for that matter Marino Marini when he didn’t pick the rider as carefully
+as the horse
+<span style="display:inline-block; width:6.5em;"></span>it seems they were all cheated of some marvelous
+<span style="display:inline-block; width:1.5em;"></span>experience
 which is not going to go wasted on me which is why I’m telling you about it

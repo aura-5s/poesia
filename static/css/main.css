@@ -4,8 +4,7 @@
   --surface:  #141414;
   --text:     #d8d0c8;
   --muted:    #6a6460;
-  --accent:   rgb(180, 100, 120);
-  --hover:    rgb(180, 100, 120);
+  --accent:    rgb(180, 100, 120);
 
   --font-ui:   'Proza Libre', sans-serif;
   --font-body: 'Crimson Text', serif;
@@ -36,6 +35,7 @@ nav.site-nav {
   height: var(--nav-h);
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 2rem;
   gap: 1.5rem;
   background: var(--bg);
@@ -43,7 +43,10 @@ nav.site-nav {
 }
 
 .nav-dot {
-  flex-shrink: 0;
+  position: absolute;
+  left: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
   width: var(--dot-size);
   height: var(--dot-size);
   border-radius: 50%;
@@ -56,7 +59,7 @@ nav.site-nav {
 .nav-breadcrumb {
   font-family: var(--font-ui);
   font-size: 0.85rem;
-  color: #fff;
+  color: var(--text);
   flex: 1;
   text-align: center;
   letter-spacing: 0.03em;
@@ -65,13 +68,13 @@ nav.site-nav {
   text-overflow: ellipsis;
 }
 .nav-breadcrumb a { transition: color 0.15s; }
-.nav-breadcrumb a:hover { color: var(--hover); }
+.nav-breadcrumb a:hover { color: var(--accent); }
 
 /* ── Main layout ── */
 main {
   flex: 1;
   padding: 3rem 2rem 4rem;
-  max-width: 900px;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
 }
@@ -95,7 +98,7 @@ main {
   margin-top: 0.2rem;
   letter-spacing: 0.03em;
 }
-.page-header .meta a:hover { color: var(--hover); }
+.page-header .meta a:hover { color: var(--accent); }
 
 /* ── View switcher (homepage) ── */
 .view-switcher {
@@ -116,8 +119,8 @@ main {
 }
 .view-btn:hover,
 .view-btn.active {
-  color: var(--hover);
-  border-color: var(--hover);
+  color: var(--accent);
+  border-color: var(--accent);
 }
 
 /* ── List views ── */
@@ -135,7 +138,7 @@ main {
   padding: 0.15rem 0;
   transition: color 0.15s;
 }
-.view-ap .author-row:hover { color: var(--hover); }
+.view-ap .author-row:hover { color: var(--accent); }
 
 .view-ap .poem-row {
   display: block;
@@ -144,11 +147,11 @@ main {
   font-weight: 400;
   color: var(--text);
   padding: 0.23rem 0;
-  padding-left: 1.4rem;
+  padding-left: 1.6rem;
   line-height: 1.1;
   transition: color 0.15s;
 }
-.view-ap .poem-row:hover { color: var(--hover); }
+.view-ap .poem-row:hover { color: var(--accent); }
 
 /* Views 2 & 3: single level */
 .view-a .list-item,
@@ -165,7 +168,7 @@ main {
   transition: color 0.15s;
 }
 .view-a .list-item:hover,
-.view-p .list-item:hover { color: var(--hover); }
+.view-p .list-item:hover { color: var(--accent); }
 
 .view-a .item-main,
 .view-p .item-main {
@@ -178,20 +181,20 @@ main {
 }
 /* on hover, meta follows */
 .view-a .list-item:hover .item-meta,
-.view-p .list-item:hover .item-meta { color: var(--hover); opacity: 0.7; }
+.view-p .list-item:hover .item-meta { color: var(--accent); opacity: 0.7; }
 
 /* ── Author page poem list ── */
 .author-poems .poem-item {
   display: block;
   padding: 0.3rem 0;
   font-family: var(--font-ui);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.2;
   color: var(--text);
   transition: color 0.15s; 
 }
-.author-poems .poem-item:hover { color: var(--hover); }
+.author-poems .poem-item:hover { color: var(--accent); }
 
 /* ── Poem page ── */
 /* .poem-page { } */
@@ -242,6 +245,40 @@ main {
   letter-spacing: -0.03ch;
 }
 
+/* ---- Footnotes ---- */
+.footnotes {
+  margin-top: 7rem;
+  font-size: 1rem;
+  max-width: 500px;
+}
+.footnotes hr {
+  margin-bottom: 0.3rem;
+}
+.footnotes ol {
+  padding-left: 1rem;
+  line-height: 1.1;
+  letter-spacing: -0.07ch;
+  word-spacing: -0.05ch;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
 /* ── Mobile ── */
 @media (max-width: 600px) {
   main { padding: 2rem 1.2rem 3rem; }
@@ -253,12 +290,12 @@ main {
   .view-a .list-item,
   .view-p .list-item {
     flex-direction: column;
-    gap: 0.1rem;
+    gap: 0.05rem;
     align-items: flex-start;
   }
   .view-a .item-meta,
   .view-p .item-meta {
-    font-size: 0.74rem;
+    font-size: 0.76rem;
     line-height: 1;
   }
 }

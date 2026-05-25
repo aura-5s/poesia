@@ -2,16 +2,20 @@
 {{ $isVerso := eq (.Params.type | lower) "verso" }}
 {{ $typeClass := cond $isVerso "is-verso" "is-prosa" }}
 
+{{/* Obtener la term page del autor directamente — evita reconstruir el slug */}}
+{{ $authorTerms := .GetTerms "author" }}
+{{ $authorPage := index $authorTerms 0 }}
+
 <article class="poem-page {{ $typeClass }}">
   <header class="page-header">
     <h1>{{ .Title }}</h1>
     {{ with .Params.author }}
-      {{ $authorURL := "" }}
-      {{ with site.GetPage (printf "/author/%s" (. | urlize)) }}
-        {{ $authorURL = .RelPermalink }}
-      {{ end }}
       <p class="meta">
-        {{ if $authorURL }}<a href="{{ $authorURL }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}
+        {{ if $authorPage }}
+          <a href="{{ $authorPage.RelPermalink }}">{{ . }}</a>
+        {{ else }}
+          {{ . }}
+        {{ end }}
       </p>
     {{ end }}
   </header>

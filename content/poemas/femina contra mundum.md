@@ -4,27 +4,27 @@ author: Gilbert Keith Chesterton
 type: verso
 ---
 
-El Sol era negro, juicioso, y sangrienta
-Era la Luna: pero entre ambos
-Apareció un hombre de pie, diciendo:
-"Para mí, al menos, el césped es verde.
+The sun was black with judgment, and the moon  
+Blood: but between  
+I saw a man stand, saying: "To me at least  
+The grass is green.
 
-No hay ninguna estrella que olvidara temer
-Con amor y asombro;
-las aves me han amado" —pero no hubo respuesta;
-Solo el trueno.
+"There was no star that I forgot to fear  
+With love and wonder.  
+The birds have loved me"; but no answer came —
+Only the thunder.
 
-Y una vez más el hombre de pie dijo:
-"Miré fijamente a través de la puerta de una cabaña;
-En ese instante me voltee —sí, soy vil—
-Y mis ojos ardieron.
+Once more the man stood, saying: "A cottage door,  
+Wherethrough I gazed  
+That instant as I turned — yea, I am vile;  
+Yet my eyes blazed.
 
-Porque ya había pesado las montañas en una balanza,
-Y los cielos en una báscula,
-Vengo a vender estrellas —lámparas viejas por nuevas—
-¡Viejas estrellas en venta!"
+"For I had weighed the mountains in a balance,  
+And the skies in a scale,  
+I come to sell the stars — old lamps for new —
+Old stars for sale."
 
-Entonces una voz cayó con el trueno creciente,
-un tono menos áspero, que dijo:
-"Has comenzado a amar una de mis obras
-casi lo suficiente".
+Then a calm voice fell all the thunder through,  
+A tone less rough:  
+"Thou hast begun to love one of my works  
+Almost enough."

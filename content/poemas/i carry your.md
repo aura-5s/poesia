@@ -8,7 +8,7 @@ i carry your heart with me(i carry it in
 my heart)i am never without it(anywhere
 i go you go,my dear;and whatever is done
 by only me is your doing,my darling)
-&emsp;&emsp;&emsp;&emsp;i fear
+<span style="display:inline-block; width:12.3em;"></span>i fear
 no fate(for you are my fate,my sweet)i want
 no world(for beautiful you are my world,my true)
 and it’s you are whatever a moon has always meant
