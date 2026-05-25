@@ -12,7 +12,7 @@
 
   --nav-h:    56px;
   --dot-size: 36px;
-  --max-prose: 660px;
+  --max-prose: 700px;
   --max-verse: fit-content;
 }
 
@@ -71,7 +71,7 @@ nav.site-nav {
 main {
   flex: 1;
   padding: 3rem 2rem 4rem;
-  max-width: 800px;
+  max-width: 900px;
   width: 100%;
   margin: 0 auto;
 }
@@ -79,6 +79,7 @@ main {
 /* ── Page header ── */
 .page-header {
   margin-bottom: 2.5rem;
+  text-align: center;
 }
 .page-header h1 {
   font-family: var(--font-body);
@@ -89,10 +90,10 @@ main {
 }
 .page-header .meta {
   font-family: var(--font-ui);
-  font-size: 0.78rem;
+  font-size: 0.82rem;
   color: var(--muted);
-  margin-top: 0.4rem;
-  letter-spacing: 0.04em;
+  margin-top: 0.2rem;
+  letter-spacing: 0.03em;
 }
 .page-header .meta a:hover { color: var(--hover); }
 
@@ -123,7 +124,7 @@ main {
 .poem-list { width: 100%; }
 
 /* View 1: A/P — author groups */
-.view-ap .author-group { margin-bottom: 1.6rem; }
+.view-ap .author-group { margin-bottom: 1.3rem; }
 
 .view-ap .author-row {
   display: block;
@@ -138,12 +139,13 @@ main {
 
 .view-ap .poem-row {
   display: block;
-  font-family: var(--font-body);
-  font-size: 0.95rem;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
   font-weight: 400;
   color: var(--text);
-  padding: 0.12rem 0;
+  padding: 0.23rem 0;
   padding-left: 1.4rem;
+  line-height: 1.1;
   transition: color 0.15s;
 }
 .view-ap .poem-row:hover { color: var(--hover); }
@@ -154,7 +156,7 @@ main {
   display: flex;
   align-items: baseline;
   gap: 0.6rem;
-  padding: 0.15rem 0;
+  padding: 0.3rem 0;
   font-family: var(--font-body);
   font-size: 0.95rem;
   font-weight: 400;
@@ -168,6 +170,7 @@ main {
 .view-p .item-main {
   font-family: var(--font-ui);
   font-size: 0.88rem;
+  line-height: 1.2;
 }
 .view-a .item-meta,
 .view-p .item-meta {
@@ -214,16 +217,29 @@ main {
   max-width: var(--max-prose);
 }
 
+/* Prosa: container wraps to content, centered */
+.poem-page.is-prosa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .poem-body {
   font-family: var(--font-body);
-  font-size: 1.05rem;
-  line-height: 1.75;
+  font-size: 1.14rem;
+  line-height: 1.3;
   color: var(--text);
+  white-space: pre-wrap;
+}
+
+.poem-body p:not(:first-of-type) {
+  margin-top: 1.2rem;
 }
 
 /* preserve line breaks for verse */
-.poem-body.verse-text {
-  white-space: pre-wrap;
+.verse-text {
+  word-spacing: -0.04ch;
+  letter-spacing: -0.03ch;
 }
 
 /* ── Mobile ── */

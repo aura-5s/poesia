@@ -6,8 +6,13 @@
   <header class="page-header">
     <h1>{{ .Title }}</h1>
     {{ with .Params.author }}
-      {{ $authorURL := printf "/author/%s/" (. | urlize) | relURL }}
-      <p class="meta"><a href="{{ $authorURL }}">{{ . }}</a></p>
+      {{ $authorURL := "" }}
+      {{ with site.GetPage (printf "/author/%s" (. | urlize)) }}
+        {{ $authorURL = .RelPermalink }}
+      {{ end }}
+      <p class="meta">
+        {{ if $authorURL }}<a href="{{ $authorURL }}">{{ . }}</a>{{ else }}{{ . }}{{ end }}
+      </p>
     {{ end }}
   </header>
 

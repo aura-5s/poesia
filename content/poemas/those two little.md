@@ -1,6 +1,6 @@
 ---
 title: Those two little words
-author: ???
+author: desconocido
 type: verso
 ---
 
