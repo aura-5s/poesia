@@ -1,9 +1,6 @@
-# ── Actualiza baseURL con tu usuario y nombre de repo ──────────────────────
-# Ejemplo para repo "poemas": baseURL = "https://tu-usuario.github.io/poemas/"
-# Ejemplo para repo raíz: baseURL = "https://tu-usuario.github.io/"
-baseURL = "https://aura-5s.github.io/poesia/"
+baseURL = "https://aura-5s.github.io/p/"
 languageCode = "es"
-title = "poesia"
+title = "poemas"
 
 [taxonomies]
   author = "author"

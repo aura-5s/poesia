@@ -1,33 +1,35 @@
 {{/*
   Nav partial.
-  Shows the accent dot (→ home) always.
-  When on an author taxonomy page or a poem single page, shows the author name centered.
-  On the author page: .Title is the author name.
-  On a poem page: .Params.author is set.
+  - Dot → home, usando site.Home.RelPermalink (respeta baseURL subfolder)
+  - En página [autor] (kind=term): muestra .Title, link a .RelPermalink
+  - En página [poema] (IsPage): muestra .Params.author, busca la term page para el link
 */}}
 
 {{ $authorName := "" }}
+{{ $authorURL  := "" }}
 
-{{ if eq .Kind "taxonomy" }}
-  {{/* author list page — no breadcrumb */}}
-{{ else if eq .Kind "term" }}
-  {{/* /author/nombre — show the author */}}
+{{ if eq .Kind "term" }}
   {{ $authorName = .Title }}
+  {{ $authorURL  = .RelPermalink }}
 {{ else if .IsPage }}
-  {{/* single poem page */}}
   {{ with .Params.author }}
     {{ $authorName = . }}
+    {{ with site.GetPage (printf "/author/%s" (. | urlize)) }}
+      {{ $authorURL = .RelPermalink }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
 <nav class="site-nav">
-  <a href="{{ "/" | relURL }}" class="nav-dot" aria-label="Inicio"></a>
+  <a href="{{ site.Home.RelPermalink }}" class="nav-dot" aria-label="Inicio"></a>
 
   {{ if $authorName }}
     <span class="nav-breadcrumb">
-      {{/* Link to the author term page */}}
-      {{ $authorURL := printf "/author/%s/" ($authorName | urlize) | relURL }}
-      <a href="{{ $authorURL }}">{{ $authorName }}</a>
+      {{ if $authorURL }}
+        <a href="{{ $authorURL }}">{{ $authorName }}</a>
+      {{ else }}
+        {{ $authorName }}
+      {{ end }}
     </span>
   {{ end }}
 </nav>
