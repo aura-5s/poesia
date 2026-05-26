@@ -245,6 +245,17 @@ main {
   letter-spacing: -0.03ch;
 }
 
+/* ---- Epígrafe/Dedicatoria/Blockquote ---- */
+
+.poem-body blockquote {
+  text-align: right;
+  margin: 0 auto 1rem auto;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.1;
+  max-width: 350px;
+}
+
 /* ---- Footnotes ---- */
 .footnotes {
   margin-top: 7rem;
