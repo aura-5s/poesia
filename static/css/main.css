@@ -294,6 +294,7 @@ main {
 @media (max-width: 600px) {
   main { padding: 2rem 1.2rem 3rem; }
   nav.site-nav { padding: 0 1.2rem; }
+  .nav-dot { left: 1.2rem; }
 
   .view-ap .poem-row { padding-left: 0.8rem; }
 
