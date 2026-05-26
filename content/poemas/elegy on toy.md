@@ -5,8 +5,6 @@ type: verso
 ---
 
 > For Kenneth Koch
-> my love
-> —Autor
 
 You don't need a pony
 to connect you to the unseeable
