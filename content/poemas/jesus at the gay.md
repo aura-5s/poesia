@@ -4,7 +4,7 @@ author: Jay Hulme
 type: verso
 ---
 
-He’s here in the midst of it –
+He’s here in the midst of it —
 right at the centre of the dance floor,
 robes hitched up to His knees
 to make it easy to spin.

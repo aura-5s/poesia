@@ -16,7 +16,8 @@ Where the car explodes on impact
 And I die immediately.
 I'd also like a haircut
 And a sandwich and a bigger TV
-But overwhelmingly It is the car-death
+But overwhelmingly
+It is the car-death
 That I want.
 I want it every day
 And I've wanted it forever

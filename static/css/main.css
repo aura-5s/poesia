@@ -249,11 +249,11 @@ main {
 
 .poem-body blockquote {
   text-align: right;
-  margin: 0 auto 1rem auto;
+  margin: 0 0 2rem auto;
   color: var(--muted);
   font-size: 1rem;
   line-height: 1.1;
-  max-width: 350px;
+  max-width: 380px;
 }
 
 /* ---- Footnotes ---- */
