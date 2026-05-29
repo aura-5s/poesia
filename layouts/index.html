@@ -51,7 +51,7 @@
 {{/* ── VIEW P ── */}}
 <div id="view-p" class="poem-list view-p" style="display:none">
   {{ range $poemsSorted }}
-    {{ $a := .Params.author | default "Anónimo" }}
+    {{ $a := .Params.author | default "Desconocido" }}
     <a class="list-item" href="{{ .RelPermalink }}">
       <span class="item-main">{{ .Title }}</span>
       <span class="item-meta">{{ $a }}</span>

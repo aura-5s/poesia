@@ -21,7 +21,11 @@
   </header>
 
   {{ if $isVerso }}
-    <div class="poem-body verse-text">{{ .Content }}</div>
+    {{ $c := .Content }}
+    {{ $c = replaceRE `<br\s*/?>` `</span><span class="verse-line">` $c }}
+    {{ $c = replaceRE `<p>` `<p><span class="verse-line">` $c }}
+    {{ $c = replaceRE `</p>` `</span></p>` $c }}
+    <div class="poem-body verse-text">{{ $c | safeHTML }}</div>
   {{ else }}
     <div class="poem-body prose-text">{{ .Content }}</div>
   {{ end }}
